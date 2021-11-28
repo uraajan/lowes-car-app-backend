@@ -1,0 +1,27 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: CAR-DETAILS
+  datasource:
+    url: jdbc:mysql://mysqldb/lowes
+    username: root
+    password: root
+    platform: mysql
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    
+logging:
+  level:
+    root: INFO
+    test:
+      lowes:
+        assignment:
+          car: DEBUG
+  file:
+    name: ./logs/car-details.log
+    clean-history-on-start: false
